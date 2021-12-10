@@ -31,3 +31,34 @@ a {
   color: $black-color;
   transition: $transition;
 }
+.btn {
+  border-radius: $radius;
+}
+.btn-orange {
+  transition: $transition;
+  background: $orange-color;
+  color: $white-color;
+  &:hover {
+    background: #b94a00;
+    color: $white-color;
+  }
+}
+.btn-white {
+  transition: $transition;
+  background: $white-color;
+  color: $orange-color;
+  &:hover {
+    background: #b94a00;
+    color: $white-color;
+  }
+}
+
+.section-title {
+  @include flex($jc: space-between);
+  h2 {
+    font-weight: $extra-bold;
+    span {
+      font-weight: $medium-bold;
+    }
+  }
+}

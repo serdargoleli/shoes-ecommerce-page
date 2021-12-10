@@ -1,0 +1,155 @@
+/* Home Banner */
+.home-banner {
+  width: 100%;
+  background-color: $light-gray-color;
+  position: relative;
+  z-index: $z-index-50;
+  padding-top: 40px;
+  padding-bottom: 55px;
+  @include mq("desktop") {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -90px;
+    width: 100%;
+    height: 111px;
+    background: url("../../../assets/img/home-page/header-wave.png") no-repeat center / cover;
+    z-index: -$z-index-50;
+  }
+  &-left {
+    text-align: center;
+    @include mq("desktop") {
+      text-align: left;
+    }
+    h1 {
+      font-weight: $extra-bold;
+      color: $blue-color;
+      font-size: 49px;
+      text-align: center;
+      @include mq("desktop") {
+        font-size: $page-title;
+        text-align: left;
+      }
+    }
+    p {
+      color: $dark-gray-color;
+      margin-bottom: 18px;
+      font-size: $smallest-size;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      @include lineHeight($smallest-size);
+      @include mq("desktop") {
+        width: auto;
+        margin-bottom: 38px;
+        font-size: $regular-size;
+        @include lineHeight($regular-size);
+      }
+    }
+    .absulute-text {
+      display: none;
+      @include mq("desktop") {
+        display: block;
+        position: absolute;
+        left: -8%;
+        top: 5px;
+        font-weight: $extra-bold;
+        font-size: 96px;
+        color: $dark-gray-color;
+        opacity: 0.1;
+        z-index: -$z-index-1;
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+  &-right {
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    @include flex($direction: column);
+    @include mq("desktop") {
+      margin-top: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -89px;
+        width: 100%;
+        height: 440px;
+        mix-blend-mode: overlay;
+        background: url("../../../assets/img/home-page/circles.png") no-repeat center/contain;
+        z-index: -$z-index-50;
+      }
+    }
+    .image-box {
+      width: 70%;
+      position: relative;
+      padding-bottom: 15px;
+      @include mq("desktop") {
+        width: 100%;
+      }
+      img {
+        @include mq("desktop") {
+          position: absolute;
+        }
+      }
+    }
+    .size-select {
+      margin-top: 40px;
+      @include flex();
+      @include mq("desktop") {
+        position: absolute;
+        top: 270px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+      }
+      .size-list {
+        @include flex();
+        padding: 4px 8px;
+        border-radius: $radius;
+        background: $white-color;
+        color: $dark-gray-color;
+        margin-right: 15px;
+        a {
+          cursor: pointer;
+          padding: 8px;
+          font-size: $medium-size;
+          @include lineHeight($medium-size);
+          transition: $transition;
+          color: $dark-gray-color;
+          @include mq("desktop") {
+            font-size: $medium-size;
+          }
+          &:hover,
+          &.checked {
+            color: $orange-color;
+          }
+        }
+      }
+      .btn-white {
+        @include flex();
+        height: 50px;
+        font-size: $medium-size;
+        @include lineHeight($medium-size);
+        @include mq("desktop") {
+          height: 54px;
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: $medium-size;
+          @include lineHeight($medium-size);
+        }
+      }
+    }
+  }
+}
+.trend-products {
+  margin-top: 130px;
+}

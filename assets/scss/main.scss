@@ -1,11 +1,13 @@
 @import "veriables/veriables";
 @import "mixin/mixin";
 @import "base/base";
-/* COMPONONTS */
+
+/* COMPONENTS */
 @import "components/navbar";
 @import "components/footer";
 @import "components/blog-card";
 @import "components/product-card";
+
 /* PAGES */
 @import "pages/home";
 @import "pages/products";
