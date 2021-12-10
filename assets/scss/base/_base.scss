@@ -1,15 +1,19 @@
-*,
-::before,
-::after {
+* {
   box-sizing: border-box;
   text-decoration: none;
   margin: 0;
   padding: 0;
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 
 body {
   font-family: $theme-font;
   font-weight: $regular-bold;
+  letter-spacing: 0.03em;
 }
 
 ul {
@@ -21,4 +25,9 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+a {
+  text-decoration: none;
+  color: $black-color;
+  transition: $transition;
 }
