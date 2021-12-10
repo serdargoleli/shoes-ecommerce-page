@@ -1,0 +1,121 @@
+/* SINGLE PRODUCT CARD */
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: $radius;
+  overflow: hidden;
+  margin-bottom: 30px;
+  @include boxShadow();
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: 0;
+    background: $light-gray-color;
+    height: 300px;
+    width: 100%;
+    border-radius: 100%;
+    z-index: $z-index-1;
+  }
+  &:hover &-img {
+    transform: scale(1.1) rotate(14deg);
+  }
+  .sale-box {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 6px 12px;
+    background: #ff0a0a;
+    color: #fff;
+    z-index: $z-index-100;
+    border-radius: $radius;
+    font-weight: $semi-bold;
+  }
+  &-img {
+    transition: $transition;
+    position: relative;
+    z-index: $z-index-50;
+    @include flex();
+  }
+  &-body {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    &-title {
+      margin-bottom: 15px;
+      h3 {
+        margin-bottom: 0;
+        font-size: $medium-size;
+      }
+      small {
+        color: $dark-gray-color;
+      }
+    }
+    &-size,
+    &-color {
+      margin-bottom: 15px;
+      p {
+        font-weight: $regular-bold;
+        margin-bottom: 0;
+      }
+    }
+
+    &-size {
+      a {
+        margin-right: 10px;
+        color: $dark-gray-color;
+        &:hover,
+        &.active {
+          color: $orange-color;
+          font-weight: $medium-bold;
+        }
+      }
+    }
+    &-color {
+      .color-select {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50px;
+        border: 3px solid #fff;
+        @include boxShadow();
+
+        &:nth-child(2) {
+          background: $orange-color;
+        }
+        &:nth-child(3) {
+          background: #0066ff;
+        }
+        &:nth-child(4) {
+          background: #ff0000;
+        }
+        &:nth-child(5) {
+          background: #41ff00;
+        }
+      }
+    }
+
+    .btn-orange-revert {
+      @include flex();
+      width: 100%;
+      background: $bg-orange-color;
+      color: $orange-color;
+      font-weight: $regular-bold;
+      font-size: $medium-size;
+      transition: $transition;
+      &:hover {
+        background: $orange-color;
+        @include boxShadow($blur: 11px, $color: $orange-color);
+        color: #fff;
+      }
+      .ion-icon {
+        font-size: $big-size;
+      }
+      .old-price {
+        color: $dark-gray-color;
+        text-decoration: line-through;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

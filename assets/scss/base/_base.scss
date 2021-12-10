@@ -3,6 +3,13 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+input,
+button {
   &:focus,
   &:active {
     outline: none !important;
@@ -55,10 +62,10 @@ a {
 
 .section-title {
   @include flex($jc: space-between);
-  h2 {
-    font-weight: $extra-bold;
-    span {
-      font-weight: $medium-bold;
-    }
+}
+.theme-title {
+  font-weight: $black-bold;
+  span {
+    font-weight: $medium-bold;
   }
 }
