@@ -13,7 +13,8 @@
 }
 
 input,
-button {
+button,
+a {
   &:focus,
   &:active {
     outline: none !important;
