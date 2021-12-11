@@ -3,6 +3,10 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+  ::selection {
+    background: #1f5367c5;
+    color: $white-color;
+  }
   &:focus {
     outline: none !important;
   }
@@ -62,9 +66,21 @@ a {
 
 .section-title {
   @include flex($jc: space-between);
+  a {
+    display: none;
+    @include mq() {
+      display: block;
+    }
+  }
 }
 .theme-title {
   font-weight: $black-bold;
+  font-size: $big-size;
+  @include lineHeight($big-size);
+  @include mq("desktop") {
+    @include lineHeight($bigger-size);
+    font-size: $bigger-size;
+  }
   span {
     font-weight: $medium-bold;
   }

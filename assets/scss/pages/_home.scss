@@ -158,7 +158,6 @@
 
 /* BANNERS MAN/WOMAN */
 .home-banners {
-   
   .banner-box {
     @include flex($ai: flex-start, $direction: column);
     width: 100%;
@@ -169,9 +168,12 @@
     .text-box {
       padding-left: 35px;
       color: #fff;
-      max-width: 50%;
+      max-width: 80%;
       position: relative;
       z-index: $z-index-50;
+      @include mq() {
+        max-width: 50%;
+      }
     }
 
     &.img-1,
@@ -179,10 +181,10 @@
       background: no-repeat bottom/cover;
     }
     &.img-1 {
-      background-image: url(../../../assets/img/home-page/banner-man.png);
+      background-image: url(../../assets/img/home-page/banner-man.png);
     }
     &.img-2 {
-      background-image: url(../../../assets/img/home-page/banner-woman.png);
+      background-image: url(../../assets/img/home-page/banner-woman.png);
     }
 
     &::before {
@@ -198,6 +200,60 @@
     }
     &.img-2::before {
       background: linear-gradient(109.52deg, rgba(72, 100, 230, 0.7) 2.51%, rgba(129, 151, 254, 0.26) 76.45%);
+    }
+  }
+}
+
+/* CATEGORIES */
+.categories-boxes {
+  .category-box {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    border-radius: $radius;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1.2rem;
+    &:hover {
+      @include boxShadow($color: $box-shadow-color);
+      & h4 {
+        opacity: 1;
+      }
+    }
+    h4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background: rgba(18, 18, 18, 0.58);
+      z-index: $z-index-150;
+      font-weight: $black-bold;
+      font-size: $bigger-size;
+      margin-bottom: 0;
+      color: $white-color;
+      letter-spacing: 0.1rem;
+      transition: $transition;
+      border-radius: $radius;
+      @include flex();
+      @include mq() {
+        opacity: 0;
+      }
+    }
+    &.cat-1 {
+      background-image: url("../../../assets/img/home-page/koşu.jpg");
+    }
+    &.cat-2 {
+      background-image: url("../../../assets/img/home-page/kaykay.jpg");
+    }
+    &.cat-3 {
+      background-image: url("../../../assets/img/home-page/basketbol.jpg");
+    }
+    &.cat-4 {
+      background-image: url("../../../assets/img/home-page/futbol.jpg");
     }
   }
 }

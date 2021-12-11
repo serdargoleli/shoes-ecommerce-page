@@ -13,8 +13,8 @@
 // $jc: justify-content
 // $ai: align-items
 // $direction: flex-direction
-@mixin flex($jc: center, $ai: center, $direction: row) {
-  display: flex;
+@mixin flex($display: flex, $jc: center, $ai: center, $direction: row) {
+  display: $display;
   justify-content: $jc;
   align-items: $ai;
   flex-direction: $direction;
@@ -27,5 +27,5 @@
 }
 
 @mixin boxShadow($x: 0, $y: 0px, $blur: 6px, $color: $box-shadow-color) {
-  box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color !important;
 }

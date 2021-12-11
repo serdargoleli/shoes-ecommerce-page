@@ -17,7 +17,7 @@
     border-radius: 100%;
     z-index: $z-index-1;
   }
-  &:hover &-img {
+  &:hover &-img img {
     transform: scale(1.1) rotate(14deg);
   }
   .sale-box {
@@ -36,6 +36,11 @@
     position: relative;
     z-index: $z-index-50;
     @include flex();
+    margin-top: 20px;
+    margin-bottom: 20px;
+    img {
+      transition: $transition;
+    }
   }
   &-body {
     padding-left: 25px;
@@ -46,6 +51,7 @@
       h3 {
         margin-bottom: 0;
         font-size: $medium-size;
+        @include lineHeight($medium-size);
       }
       small {
         color: $dark-gray-color;
