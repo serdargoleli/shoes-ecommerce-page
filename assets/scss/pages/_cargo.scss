@@ -1,0 +1,43 @@
+.cargo-page {
+  .page-banner {
+    background-image: url("../../../assets/img/cargo/cargo-banner.png");
+  }
+  .main-content {
+    /* KARGO SORGULAMA */
+    .input-text {
+      display: block;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: $smallest-size;
+    }
+
+    /* CARGO STEP */
+    .cargo-steps {
+      @include flex($jc: space-between);
+      &-box {
+        position: relative;
+        @include flex($direction: column);
+
+        .icon-box {
+          width: 64px;
+          height: 64px;
+          border-radius: 50rem;
+          background: $dark-gray-color;
+          color: $white-color;
+          font-size: $bigger-size;
+          @include flex();
+          &.complated {
+            background: $orange-color;
+            color: $white-color;
+          }
+        }
+        p {
+          margin-top: 10px;
+          color: $black-color;
+          font-weight: $medium-bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

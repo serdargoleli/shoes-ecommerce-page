@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kargo Takip - S'HOES</title>
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body class="cargo-page">
+    <!-- HEADER / NAV -->
+    <header class="header">
+      <div class="container-fluid">
+        <nav class="navbar">
+          <!-- Navbar left > Menu & Logo -->
+          <div class="navbar-left">
+            <a href="index.html">
+              <img src="./assets/img/logo.png" alt="Shoes Logo" />
+            </a>
+            <div class="navbar-left-menu">
+              <a href="index.html" class="navbar-link">Anasayfa</a>
+              <a href="products.html" class="navbar-link">Shop<ion-icon class="ms-2" name="chevron-down-outline"></ion-icon></a>
+              <a href="cargo-tracking.html" class="navbar-link active">Kargo Takip</a>
+              <a href="blog.html" class="navbar-link">Blog</a>
+              <a href="contact.html" class="navbar-link">İletişim</a>
+            </div>
+          </div>
+          <div class="navbar-right">
+            <a href="javascript:;" class="btn-nav-link" id="btn-toggle-search-box">
+              <ion-icon name="search-outline"></ion-icon>
+            </a>
+            <a href="javascript:;" class="btn-nav-link">
+              <ion-icon name="heart-outline"></ion-icon>
+            </a>
+            <a href="javascript:;" class="btn-nav-link">
+              <ion-icon name="cart-outline"></ion-icon>
+              <span class="counter rounded-pill translate-middle">4</span>
+            </a>
+            <a href="javascript:;" class="btn-nav-link btn-mobile" id="btn-toggle-mobile-menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </a>
+            <div class="navbar-right-login">
+              <a href="javascript:;">Giriş Yap</a>
+              <span class="mx-1">/</span>
+              <a href="javascript:;">Üye Ol</a>
+            </div>
+            <div class="search-box" id="search-box">
+              <ion-icon name="search"></ion-icon>
+              <input type="text" class="form-control" id="search-box-input" />
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="page-banner">
+      <h1>KARGO TAKİP</h1>
+    </section>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu-box" id="mobile-menu-box">
+      <a class="btn-close-menu" id="btn-close-menu">
+        <ion-icon name="close"></ion-icon>
+      </a>
+
+      <div class="mobile-menu-list">
+        <a href="index.html" class="navbar-link">Anasayfa</a>
+        <a href="products.html" class="navbar-link">Shop<ion-icon class="ms-2" name="chevron-down-outline"></ion-icon></a>
+        <a href="cargo-tracking.html" class="navbar-link active">Kargo Takip</a>
+        <a href="blog.html" class="navbar-link">Blog</a>
+        <a href="contact.html" class="navbar-link">İletişim</a>
+        <div class="user-box">
+          <hr />
+          <a href="blog.html" class="navbar-link">Giriş Yap</a>
+          <a href="contact.html" class="navbar-link">Üye Ol</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <!-- BREADCRUMB -->
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Kargo Takip</li>
+      </ul>
+
+      <!-- CONTENT -->
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="main-content">
+            <h2 class="subtitle">Kargo Takip</h2>
+            <p class="description text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <input type="number" class="form-control" placeholder="0123456789" value="0123456789" />
+            <small class="input-text">* Yalnızca numara giriniz</small>
+            <button class="btn btn-orange w-100">
+              <ion-icon name="send-outline"></ion-icon>
+              Sorgula
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="main-content">
+            <h2 class="subtitle"><strong>0123456789</strong> Nolu Kargo Takibi</h2>
+            <div class="cargo-steps">
+              <div class="cargo-steps-box">
+                <div class="icon-box complated">
+                  <ion-icon name="bag-check-outline"></ion-icon>
+                </div>
+                <p>
+                  Sipariş <br />
+                  Alındı
+                </p>
+              </div>
+              <div class="cargo-steps-box">
+                <div class="icon-box complated">
+                  <ion-icon name="gift-outline"></ion-icon>
+                </div>
+                <p>
+                  Kargoya<br />
+                  Gönderildi
+                </p>
+              </div>
+              <div class="cargo-steps-box">
+                <div class="icon-box complated">
+                  <ion-icon name="bus-outline"></ion-icon>
+                </div>
+                <p>
+                  Dağıtıma
+                  <br />Çıktı
+                </p>
+              </div>
+              <div class="cargo-steps-box">
+                <div class="icon-box">
+                  <ion-icon name="checkmark-done-outline"></ion-icon>
+                </div>
+                <p>Teslim <br />Edildi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <a href="index.html" class="footer-logo">
+              <img src="./assets/img/logo-white.png" alt="Footer Logo" />
+              <h5>S'HOES</h5>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-box">
+              <h6>MÜŞTERİ HİZMELERİ</h6>
+
+              <div class="text-box customer-service">
+                <a href="javascript:;">Mağaza Bul</a>
+                <a href="javascript:;">Kampanyalar</a>
+                <a href="javascript:;">Kişisel Verilerin Korunması</a>
+                <a href="javascript:;">Ödeme</a>
+                <a href="javascript:;">Gizlilik Politikası</a>
+                <a href="javascript:;">İşlem Rehberi</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-box">
+              <h6>S'HOES HAKKINDA</h6>
+              <div class="text-box about-us">
+                <a href="javascript:;">Haberler</a>
+                <a href="javascript:;">Kariyer</a>
+                <a href="javascript:;">Sürdürülebilirlik</a>
+                <a href="javascript:;">Yatırımcılar</a>
+                <a href="javascript:;">Teslimat</a>
+                <a href="javascript:;">İade</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-box">
+              <h6>YARDIM AL</h6>
+              <div class="text-box get-help">
+                <a href="javascript:;">Sipariş Durumu</a>
+                <a href="javascript:;">Kargo ve Teslimat</a>
+                <a href="javascript:;">İadeler</a>
+                <a href="javascript:;">Ödeme Seçenekleri</a>
+                <a href="javascript:;">Bize Ulaşın</a>
+                <a href="javascript:;">Site Haritası</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-box">
+              <h6>BÜLTENE ABONE OL</h6>
+              <p class="footer-text">İndirim ve kampanyalardan anında haberdar ol</p>
+              <div class="cs-input-box">
+                <input type="email" placeholder="E-posta" />
+                <button><ion-icon name="chevron-forward-outline"></ion-icon></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="footer-bottom-box navigate">
+                <ion-icon name="navigate"></ion-icon>
+                Türkiye
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <p class="footer-bottom text-center my-3 my-lg-0">&copy; 2021 S’hoes, Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="footer-bottom social-media">
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-pinterest"></ion-icon></a>
+                <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS  -->
+    <script src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
