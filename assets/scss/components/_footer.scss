@@ -11,7 +11,7 @@
     height: 98px;
     top: -96px;
     left: 0;
-    background: url(../../../assets/img/footer-wave.png) no-repeat center/cover;
+    background: url(../../assets/img/footer-wave.png) no-repeat center/cover;
   }
   &-logo {
     @include flex($display: inline-flex, $jc: flex-start);

@@ -17,7 +17,7 @@
     bottom: -90px;
     width: 100%;
     height: 111px;
-    background: url("../../../assets/img/home-page/header-wave.png") no-repeat center / cover;
+    background: url("../../assets/img/home-page/header-wave.png") no-repeat center / cover;
     z-index: -$z-index-50;
   }
   &-left {
@@ -84,7 +84,7 @@
         width: 100%;
         height: 440px;
         mix-blend-mode: overlay;
-        background: url("../../../assets/img/home-page/circles.png") no-repeat center/contain;
+        background: url(../../assets/img/home-page/circles.png) no-repeat center/contain;
         z-index: -$z-index-50;
       }
     }
