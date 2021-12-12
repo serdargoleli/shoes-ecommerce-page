@@ -104,7 +104,7 @@
       border-radius: $radius;
       padding: 25px 20px;
       background: #fff;
-      @include boxShadow($color: #00000013);
+      @include boxShadow();
       .subtitle {
         word-break: break-word;
         font-size: $medium-size;

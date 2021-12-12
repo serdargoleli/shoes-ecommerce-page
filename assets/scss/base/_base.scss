@@ -14,7 +14,8 @@
 
 input,
 button,
-a {
+a,
+textarea {
   &:focus,
   &:active {
     outline: none !important;
@@ -133,11 +134,6 @@ a {
   background: $light-gray-color;
   padding: 30px;
 
-  .subtitle {
-    font-weight: $medium-bold;
-    @include lineHeight($big-size);
-    font-size: $big-size;
-  }
   .description {
     font-size: $smaller-size;
     @include lineHeight($smaller-size);
@@ -152,6 +148,48 @@ a {
   }
 }
 
+.subtitle {
+  font-weight: $medium-bold;
+  @include lineHeight($big-size);
+  font-size: $big-size;
+}
+
 .text-muted {
   color: $dark-gray-color !important;
+}
+
+/* Float Label */
+.floating-form {
+  position: relative;
+  .form-control {
+    background: transparent;
+    position: relative;
+    z-index: $z-index-50;
+    font-size: $medium-bold;
+    &:focus,
+    &:active,
+    &:valid {
+      & + label {
+        transform: translateY(-40%);
+        top: -2px !important;
+        z-index: $z-index-100;
+        font-size: $smallest-size;
+      }
+    }
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    /* bootstrap > input > padding size */
+    left: 0.75rem;
+    z-index: $z-index-1;
+    font-size: $smaller-size;
+    transform: translateY(-50%);
+    transition: $transition;
+    background: #fff;
+    color: $dark-gray-color;
+  }
+  textarea + label {
+    top: 1.275rem;
+  }
 }

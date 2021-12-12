@@ -217,7 +217,7 @@
     background-size: cover;
     margin-bottom: 1.2rem;
     &:hover {
-      @include boxShadow($color: $box-shadow-color);
+      @include boxShadow();
       & h4 {
         opacity: 1;
       }
