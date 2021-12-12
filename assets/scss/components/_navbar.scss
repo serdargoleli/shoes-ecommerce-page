@@ -166,15 +166,12 @@
       border-top-right-radius: $radius;
       border-bottom-right-radius: $radius;
       margin-bottom: 8px;
-      &:hover {
-        background: $dark-gray-color;
+      &:hover,
+      &.active {
+        background: $blue-color;
         color: $white-color;
       }
     }
-  }
-  .active {
-    background: $dark-gray-color;
-    color: $white-color;
   }
 }
 

@@ -53,7 +53,7 @@ a {
   color: $white-color;
   &:hover {
     background: $orange-color;
-    @include boxShadow($blur: 11px, $color: $orange-color);
+    @include boxShadow($blur: 11px, $color: #ff6700ab);
     color: $white-color;
   }
 }
@@ -143,7 +143,7 @@ a {
     letter-spacing: 1.1px;
     &:hover,
     &:focus {
-      border-color: $dark-gray-color;
+      border-color: $orange-color;
     }
   }
 }
@@ -165,15 +165,20 @@ a {
     background: transparent;
     position: relative;
     z-index: $z-index-50;
-    font-size: $medium-bold;
+    font-size: $smaller-size;
+    &:hover {
+      border-color: $orange-color;
+    }
     &:focus,
     &:active,
     &:valid {
+      border-color: $orange-color;
       & + label {
         transform: translateY(-40%);
         top: -2px !important;
         z-index: $z-index-100;
         font-size: $smallest-size;
+        color: $orange-color;
       }
     }
   }
@@ -191,5 +196,98 @@ a {
   }
   textarea + label {
     top: 1.275rem;
+  }
+}
+
+.badge-orange {
+  background: $bg-orange-color;
+  color: $orange-color;
+}
+.badge-red {
+  background: $bg-red-color;
+  color: $text-red-color;
+}
+.badge-blue {
+  background: $bg-blue-color;
+  color: $text-blue-color;
+}
+
+.badge-green {
+  background: $bg-green-color;
+  color: $text-green-color;
+}
+
+/* PAGINATION */
+.pagination-box {
+  padding: 20px;
+  @include flex($direction: column);
+  @include mq() {
+    @include flex($jc: space-between);
+  }
+  .limit-select {
+    @include flex();
+    color: $dark-gray-color;
+    font-size: $smallest-size;
+    margin-bottom: 20px;
+    @include mq() {
+      font-size: $regular-size;
+      margin-bottom: 0;
+    }
+  }
+  .cs-pagination {
+    @include flex();
+    & > * {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .btn {
+      height: 31px;
+      @include flex($ai: center);
+      font-size: $smaller-size;
+      border-color: $orange-color;
+      color: $orange-color !important;
+      &:hover {
+        background: $orange-color;
+        color: $white-color !important;
+        @include boxShadow($color: #ff6700ab);
+      }
+    }
+
+    p {
+      span {
+        color: $dark-gray-color;
+        &:first-child {
+          margin-right: 8px;
+        }
+      }
+    }
+    &-input {
+      color: $dark-gray-color;
+      width: 40px;
+      border: 1px solid $dark-gray-color;
+      border-radius: $radius;
+      padding: 0.25rem 0.5rem;
+      font-size: $smaller-size;
+      text-align: center;
+      transition: $transition;
+      &:focus,
+      &:active,
+      &:hover {
+        border-color: $orange-color;
+        color: $orange-color;
+      }
+    }
+  }
+  .dropdown {
+    &-item {
+      &.active {
+        background: $orange-color !important;
+      }
+      &:hover {
+        background: $bg-orange-color;
+      }
+    }
   }
 }
