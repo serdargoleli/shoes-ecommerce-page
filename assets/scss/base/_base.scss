@@ -199,6 +199,16 @@ a {
   }
 }
 
+/* BLOG TAGS */
+.cs-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: $radius;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: $smaller-size;
+  @include lineHeight($smaller-size);
+}
 .badge-orange {
   background: $bg-orange-color;
   color: $orange-color;

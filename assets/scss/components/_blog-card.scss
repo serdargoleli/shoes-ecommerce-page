@@ -8,15 +8,7 @@
       transition: $transition;
     }
   }
-  .cs-badge {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: $radius;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-size: $smaller-size;
-    @include lineHeight($smaller-size);
-  }
+
   .blog-title {
     font-size: $medium-size;
     @include lineHeight($medium-size);
