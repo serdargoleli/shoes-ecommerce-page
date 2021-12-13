@@ -156,54 +156,6 @@
   margin-top: 130px;
 }
 
-/* BANNERS MAN/WOMAN */
-.home-banners {
-  .banner-box {
-    @include flex($ai: flex-start, $direction: column);
-    width: 100%;
-    height: 326px;
-    position: relative;
-    border-radius: $radius;
-    overflow: hidden;
-    .text-box {
-      padding-left: 35px;
-      color: #fff;
-      max-width: 80%;
-      position: relative;
-      z-index: $z-index-50;
-      @include mq() {
-        max-width: 50%;
-      }
-    }
-
-    &.img-1,
-    &.img-2 {
-      background: no-repeat bottom/cover;
-    }
-    &.img-1 {
-      background-image: url(../../assets/img/home-page/banner-man.png);
-    }
-    &.img-2 {
-      background-image: url(../../assets/img/home-page/banner-woman.png);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-    &.img-1::before {
-      background: linear-gradient(109.6deg, #ff6700 1.42%, rgba(255, 103, 0, 0.26) 62.22%);
-    }
-    &.img-2::before {
-      background: linear-gradient(109.52deg, rgba(72, 100, 230, 0.7) 2.51%, rgba(129, 151, 254, 0.26) 76.45%);
-    }
-  }
-}
-
 /* CATEGORIES */
 .categories-boxes {
   .category-box {
