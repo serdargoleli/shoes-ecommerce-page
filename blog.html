@@ -9,22 +9,104 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body class="blog-page">
-    <!-- HEADER / NAV -->
-    <header class="header">
+    <!--  NAV -->
+    <nav class="nav">
       <div class="container-fluid">
-        <nav class="navbar">
-          <!-- Navbar left > Menu & Logo -->
+        <div class="navbar">
+          <!-- NAVBAR ICON & MENU -->
           <div class="navbar-left">
+            <!-- NAVBAR ICON  -->
             <a href="index.html">
               <img src="./assets/img/logo.png" alt="Shoes Logo" />
             </a>
-            <div class="navbar-left-menu">
-              <a href="index.html" class="navbar-link">Anasayfa</a>
-              <a href="products.html" class="navbar-link">Shop<ion-icon class="ms-2" name="chevron-down-outline"></ion-icon></a>
-              <a href="cargo-tracking.html" class="navbar-link">Kargo Takip</a>
-              <a href="blog.html" class="navbar-link active">Blog</a>
-              <a href="contact.html" class="navbar-link">İletişim</a>
-            </div>
+            <!-- NAVABR MENU -->
+            <ul class="navbar-left-menu">
+              <li class="navbar-item">
+                <a class="navbar-link" href="index.html">Anasayfa</a>
+              </li>
+              <!-- DROPDOWN START -->
+              <li class="navbar-item dropdown">
+                <a class="navbar-link dropdown-toggle" href="products.html"> Shop <ion-icon class="ms-2" name="chevron-down-outline"></ion-icon> </a>
+                <div class="dropdown-menu megamenu" role="menu">
+                  <div class="dropdown-content">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col">
+                          <div class="dropdown-menu-item">
+                            <h4 class="list-title">Kategoriler</h4>
+                            <ul class="sub-menu">
+                              <li><a href="404.html">404</a></li>
+                              <li><a href="blog.html">Blog</a></li>
+                              <li><a href="blog-detail.html">Blog Detay</a></li>
+                              <li><a href="product-detail.html">Ürün Detay</a></li>
+                              <li><a href="contact.html">İletişim</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="dropdown-menu-item">
+                            <h4 class="list-title">Erkek</h4>
+                            <ul class="sub-menu">
+                              <li><a href="products.html">Model XM1</a></li>
+                              <li><a href="products.html">Model MD21</a></li>
+                              <li><a href="products.html">Model XYZ23</a></li>
+                              <li><a href="products.html">Model UIP21</a></li>
+                              <li><a href="products.html">Model XSMAX</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="dropdown-menu-item">
+                            <h4 class="list-title">Kadın</h4>
+                            <ul class="sub-menu">
+                              <li><a href="products.html">Model WX-123</a></li>
+                              <li><a href="products.html">Model WXZ11</a></li>
+                              <li><a href="products.html">Model WXZY23</a></li>
+                              <li><a href="products.html">Model WXK4123</a></li>
+                              <li><a href="products.html">Model WXDAW12</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="dropdown-menu-item">
+                            <h4 class="list-title">Outlet</h4>
+                            <ul class="sub-menu">
+                              <li><a href="products.html">Model Otl-123</a></li>
+                              <li><a href="products.html">Model Otl-Wi444</a></li>
+                              <li><a href="products.html">Model Otl-Air123 </a></li>
+                              <li><a href="products.html">Model Otl-Maxx32 </a></li>
+                              <li><a href="products.html">Model Otl-Pro546</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="dropdown-menu-item">
+                            <h4 class="list-title">Fırsat Ürünleri</h4>
+                            <ul class="sub-menu">
+                              <li><a href="products.html">Model Otl-123</a></li>
+                              <li><a href="products.html">Model Otl-Wi444</a></li>
+                              <li><a href="products.html">Model Otl-Air123 </a></li>
+                              <li><a href="products.html">Model Otl-Maxx32 </a></li>
+                              <li><a href="products.html">Model Otl-Pro546</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- DROPDOWN END -->
+              <li class="nav-bar-item">
+                <a class="navbar-link" href="cargo-tracking.html">Kargo Takip</a>
+              </li>
+              <li class="nav-bar-item">
+                <a class="navbar-link active" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-bar-item">
+                <a class="navbar-link" href="contact.html">İletişim</a>
+              </li>
+            </ul>
           </div>
           <div class="navbar-right">
             <a href="javascript:;" class="btn-nav-link" id="btn-toggle-search-box">
@@ -50,12 +132,14 @@
               <input type="text" class="form-control" id="search-box-input" />
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-    </header>
-    <section class="page-banner">
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-banner">
       <h1>BLOG</h1>
-    </section>
+    </header>
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>

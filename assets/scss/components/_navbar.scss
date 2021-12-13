@@ -1,4 +1,4 @@
-.header {
+nav.nav {
   width: 100%;
   background: $light-gray-color;
   position: sticky;
@@ -208,5 +208,70 @@
   @include mq("desktop") {
     width: 0 !important;
     overflow: hidden !important;
+  }
+}
+
+.navbar {
+  .dropdown {
+    position: static !important;
+    &-toggle::after {
+      content: none;
+    }
+    &-menu {
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding-top: 20px;
+      transform: translateY(33px);
+      background-color: transparent;
+      border: none;
+      color: $black-color;
+      padding: 14px;
+      display: block;
+      opacity: 0;
+      transition: $transition;
+      z-index: -$z-index-1;
+      pointer-events: none;
+    }
+    &-content {
+      padding: 24px;
+      background: white;
+      border-radius: $radius;
+      @include boxShadow();
+      .list-title {
+        margin-bottom: 5px;
+        border-bottom: 1px dashed $black-color;
+        font-size: $regular-size;
+        @include lineHeight($regular-size);
+      }
+      .sub-menu {
+        li {
+          transition: $transition;
+          border-radius: $radius;
+          &:hover {
+            background: $bg-orange-color;
+            a {
+              color: $orange-color !important;
+            }
+          }
+          a {
+            padding: 8px;
+            color: $dark-gray-color;
+            display: block;
+            font-size: $smaller-size;
+            @include lineHeight($smaller-size);
+          }
+        }
+      }
+    }
+  }
+
+  /* Hover olduğunda dropdown menü gözükmesi için */
+  .navbar-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1 !important;
+    z-index: $z-index-150 !important;
+    transform: translateY(0);
+    pointer-events: all;
   }
 }
