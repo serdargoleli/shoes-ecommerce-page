@@ -85,8 +85,9 @@ a {
   background: $white-color;
   color: $orange-color;
   &:hover {
-    background: #b94a00;
+    background: $orange-color;
     color: $white-color;
+    @include boxShadow($blur: 11px, $color: #ff2727ab);
   }
 }
 

@@ -47,7 +47,10 @@
     }
   }
   .share-social {
-    @include flex($jc: flex-end);
+    @include flex($jc: center);
+    @include mq("desktop") {
+      @include flex($jc: flex-end);
+    }
     a {
       @include flex();
       color: $dark-gray-color;
@@ -123,5 +126,4 @@
   .top-100 {
     top: 100px !important;
   }
- 
 }
