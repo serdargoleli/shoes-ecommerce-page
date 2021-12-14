@@ -123,20 +123,5 @@
   .top-100 {
     top: 100px !important;
   }
-  .breadcrumb-container {
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    @include mq() {
-      width: 100%;
-      overflow-x: auto;
-      overflow-y: auto;
-    }
-    .breadcrumb {
-      min-width: 150%;
-      @include mq() {
-        min-width: auto;
-      }
-    }
-  }
+ 
 }

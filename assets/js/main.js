@@ -34,3 +34,16 @@ btnCloseMenu.addEventListener("click", () => {
   mobileMenuBox.classList.remove("open-mobile-menu");
   overlay.classList.remove("open-overlay");
 });
+
+/* Product detail image */
+let selectedImage, getImageUrl, carouselImg;
+const carouselContainer = document.querySelector(".cs-carousel-img");
+carouselImg = document.querySelector("#product-detail-img");
+
+for (let i = 0; i < carouselContainer.children.length; i++) {
+  carouselContainer.children[i].addEventListener("click", function () {
+    selected = carouselContainer.children[i];
+    getImageUrl = selected.getAttribute("data-img");
+    carouselImg.src = getImageUrl;
+  });
+}

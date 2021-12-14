@@ -67,6 +67,19 @@ a {
     }
   }
 }
+
+.btn-favorite {
+  @include flex();
+  background-color: $bg-red-color;
+  color: $text-red-color;
+  &:hover {
+    background-color: $text-red-color;
+    color: $white-color;
+    @include boxShadow($blur: 11px, $color:  #ff2727ab)
+  }
+}
+
+
 .btn-white {
   transition: $transition;
   background: $white-color;
@@ -357,5 +370,56 @@ a {
     &.img-2::before {
       background: linear-gradient(109.52deg, rgba(72, 100, 230, 0.7) 2.51%, rgba(129, 151, 254, 0.26) 76.45%);
     }
+  }
+}
+
+/* BREADCRUMB SCROLL */
+.breadcrumb-container {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  @include mq() {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  .breadcrumb {
+    min-width: 150%;
+    @include mq() {
+      min-width: auto;
+    }
+  }
+}
+
+.color-boxes {
+  .color-select {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    border: 3px solid #fff;
+    @include boxShadow();
+  }
+}
+
+/* product SALE */
+.sale-box {
+  padding: 6px 12px;
+  background: #ff0a0a;
+  color: #fff;
+  border-radius: $radius;
+  font-weight: $semi-bold;
+}
+
+.btn-blue-revert {
+  @include flex();
+  background: $bg-blue-color;
+  color: $blue-color;
+  font-weight: $regular-bold;
+  font-size: $medium-size;
+  transition: $transition;
+  &:hover {
+    background: $blue-color;
+    color: $white-color;
   }
 }

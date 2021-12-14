@@ -1,0 +1,110 @@
+.products-detail-page {
+  .cs-carousel {
+    img {
+      border-radius: $radius;
+    }
+    .product-detail-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    &-img {
+      @include flex();
+      a {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .product-details {
+    p {
+      margin-bottom: 0;
+    }
+    &-header {
+      @include flex($jc: space-between, $ai: flex-start);
+      .star-box {
+        @include flex($jc: space-between, $direction: column);
+        .stars > * {
+          font-size: $medium-size;
+          color: $orange-color;
+        }
+      }
+    }
+    &-title {
+      p {
+        font-weight: $light-bold;
+        margin-bottom: 0;
+      }
+      h1 {
+        font-weight: $semi-bold;
+        font-size: $bigger-size;
+        @include lineHeight($bigger-size);
+      }
+    }
+    &-price {
+      margin-bottom: 15px;
+      font-weight: $semi-bold;
+      @include flex($jc: flex-start);
+      .new-price {
+        color: $orange-color;
+        font-size: $big-size;
+        @include lineHeight($big-size);
+        margin-right: 15px;
+      }
+      .old-price {
+        color: $dark-gray-color;
+        text-decoration: line-through;
+        font-size: $medium-size;
+        @include lineHeight($medium-size);
+      }
+    }
+    &-size {
+      margin-bottom: 15px;
+      & > div {
+        margin-top: 8x;
+        @include flex($jc: flex-start);
+        a {
+          font-size: $medium-size;
+          color: $dark-gray-color;
+          margin-right: 10px;
+          &:hover {
+            color: $orange-color;
+          }
+          &.active {
+            color: $orange-color;
+            font-weight: $medium-bold;
+          }
+        }
+      }
+    }
+    &-color {
+      margin-top: 15px;
+      .color-boxes {
+        margin-top: 8px;
+      }
+    }
+    &-btns {
+      margin-top: 25px;
+      @include flex($jc: flex-start);
+      .btn-orange {
+        @include flex($jc: space-around);
+      }
+      .btn-favorite {
+        align-self: normal;
+      }
+    }
+    /* input > number arttırma butonlarını gizlemek için */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+}
