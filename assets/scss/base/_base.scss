@@ -72,13 +72,13 @@ a {
   @include flex();
   background-color: $bg-red-color;
   color: $text-red-color;
+  transition: $transition;
   &:hover {
     background-color: $text-red-color;
     color: $white-color;
-    @include boxShadow($blur: 11px, $color:  #ff2727ab)
+    @include boxShadow($blur: 11px, $color: #ff2727ab);
   }
 }
-
 
 .btn-white {
   transition: $transition;
@@ -384,7 +384,7 @@ a {
     overflow-y: auto;
   }
   .breadcrumb {
-    min-width: 150%;
+    min-width: max-content;
     @include mq() {
       min-width: auto;
     }
