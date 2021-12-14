@@ -10,6 +10,13 @@
     .product-detail-img {
       width: 100%;
       height: auto;
+      img {
+        width: 100%;
+        @include mq("desktop") {
+          height: 450px;
+          object-fit: cover;
+        }
+      }
     }
     &-img {
       @include flex();
