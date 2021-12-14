@@ -1,19 +1,48 @@
 .products-detail-page {
   .cs-carousel {
+    @include flex($direction: column, $ai: center);
+    @include mq("desktop") {
+      @include flex($direction: row-reverse, $ai: flex-start);
+    }
     img {
       border-radius: $radius;
     }
     .product-detail-img {
       width: 100%;
       height: auto;
-      margin-bottom: 10px;
     }
     &-img {
       @include flex();
+      margin-right: 0;
+      margin-top: 15px;
+
+      @include mq("desktop") {
+        @include flex($direction: column);
+        margin-right: 20px;
+        margin-top: 0;
+      }
       a {
-        margin-right: 10px;
+        width: auto;
+        height: auto;
+        margin-right: 15px;
+        margin-bottom: 0;
         &:last-child {
           margin-right: 0;
+        }
+
+        @include mq("desktop") {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 10px;
+          &:last-child {
+            margin-right: 15px;
+          }
+        }
+        &:hover img {
+          transform: scale(1.1);
+        }
+        img {
+          transition: $transition;
         }
       }
     }
@@ -39,8 +68,12 @@
       }
       h1 {
         font-weight: $semi-bold;
-        font-size: $bigger-size;
-        @include lineHeight($bigger-size);
+        font-size: $big-size;
+        @include lineHeight($big-size);
+        @include mq("desktop") {
+          font-size: $bigger-size;
+          @include lineHeight($bigger-size);
+        }
       }
     }
     &-price {

@@ -197,7 +197,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="product-details">
+          <div class="product-details mt-5 mt-lg-0">
             <div class="product-details-header">
               <div class="sale-box">Sale</div>
               <div class="star-box">
@@ -348,5 +348,19 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+      /* Product detail image */
+      let selectedImage, getImageUrl, carouselImg;
+      const carouselContainer = document.querySelector(".cs-carousel-img");
+      carouselImg = document.querySelector("#product-detail-img");
+
+      for (let i = 0; i < carouselContainer.children.length; i++) {
+        carouselContainer.children[i].addEventListener("click", function () {
+          selected = carouselContainer.children[i];
+          getImageUrl = selected.getAttribute("data-img");
+          carouselImg.src = getImageUrl;
+        });
+      }
+    </script>
   </body>
 </html>
