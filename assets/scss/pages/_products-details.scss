@@ -108,14 +108,23 @@
           font-size: $medium-size;
           color: $dark-gray-color;
           margin-right: 10px;
-          &:hover {
+          cursor: default;
+          &.disabled {
+            text-decoration: line-through;
+            color: #d1d1d1;
+          }
+          &:not(.disabled):hover {
             color: $orange-color;
+            cursor: pointer;
           }
           &.active {
             color: $orange-color;
             font-weight: $medium-bold;
           }
         }
+      }
+      del {
+        text-decoration: line-through;
       }
     }
     &-color {

@@ -46,7 +46,9 @@
         box-shadow: none !important;
         border: none;
         border-top: 1px solid $light-gray-color;
-        &:hover,
+        &:hover {
+          color: $orange-color;
+        }
         &:not(.collapsed) {
           background: $bg-orange-color;
           color: $orange-color;
