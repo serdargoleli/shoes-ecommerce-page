@@ -453,3 +453,39 @@ a {
     font-size: $smaller-size;
   }
 }
+
+.login-modal {
+  .btn-close {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+    opacity: 1;
+    border-radius: 100%;
+    transition: $transition;
+    padding: 10px;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+  .modal {
+    &-header,
+    &-footer {
+      border: none;
+    }
+    &-header,
+    &-body {
+      padding-bottom: 0;
+    }
+    &-dialog {
+      max-width: 300px;
+    }
+    &-content {
+      border-radius: $radius;
+    }
+    &-footer {
+      justify-content: center;
+    }
+  }
+}
