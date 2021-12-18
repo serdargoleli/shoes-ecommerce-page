@@ -26,6 +26,7 @@ textarea {
 body {
   font-family: $theme-font;
   font-weight: $regular-bold;
+  font-size: $regular-size;
   color: $black-color;
 }
 
@@ -43,6 +44,9 @@ a {
   text-decoration: none;
   color: $black-color;
   transition: $transition;
+  &:hover {
+    color: $orange-color;
+  }
 }
 .btn {
   border-radius: $radius;
@@ -406,7 +410,7 @@ a {
 /* product SALE */
 .sale-box {
   padding: 6px 12px;
-  background: #ff0a0a;
+  background: $black-color;
   color: #fff;
   border-radius: $radius;
   font-weight: $semi-bold;
@@ -422,5 +426,30 @@ a {
   &:hover {
     background: $blue-color;
     color: $white-color;
+  }
+}
+
+.btn-orange-revert {
+  @include flex();
+  background: $bg-orange-color;
+  color: $orange-color;
+
+  transition: $transition;
+  &:hover {
+    background: $orange-color;
+    color: #fff;
+    @include boxShadow($blur: 11px, $color: $orange-color);
+    & .old-price {
+      color: #cdcdcd !important;
+    }
+  }
+  .ion-icon {
+    font-size: $big-size;
+  }
+  .old-price {
+    color: $dark-gray-color;
+    text-decoration: line-through;
+    margin-left: 1rem;
+    font-size: $smaller-size;
   }
 }

@@ -35,13 +35,24 @@
 
   .sidebar {
     .accordion {
+      &-item {
+        border-bottom: none;
+        &:first-child button {
+          border-top: 0;
+        }
+      }
       &-button {
-        border-radius: $radius;
+        border-radius: 0;
         box-shadow: none !important;
         border: none;
+        border-top: 1px solid $light-gray-color;
+        &:hover,
         &:not(.collapsed) {
           background: $bg-orange-color;
           color: $orange-color;
+          border-radius: $radius;
+          border-color: transparent;
+
           &:after {
             background: none;
           }

@@ -209,3 +209,12 @@
     }
   }
 }
+
+.banner-box-link {
+  &:hover .text-box {
+    transform: translateY(-27px);
+  }
+  .text-box {
+    transition: $transition;
+  }
+}

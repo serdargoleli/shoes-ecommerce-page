@@ -18,7 +18,7 @@
     z-index: $z-index-1;
   }
   &:hover &-img img {
-    transform: scale(1.1) rotate(14deg);
+    transform: scale(1) rotate(14deg);
   }
   .sale-box {
     position: absolute;
@@ -33,8 +33,13 @@
     @include flex();
     margin-top: 20px;
     margin-bottom: 20px;
-    img {
-      transition: $transition;
+    a {
+      width: 100%;
+      text-align: center;
+      img {
+        transition: $transition;
+        transform: scale(0.8);
+      }
     }
   }
   &-body {
@@ -43,6 +48,7 @@
     padding-bottom: 25px;
     &-title {
       margin-bottom: 15px;
+      word-break: break-word;
       h3 {
         margin-bottom: 0;
         font-size: $medium-size;
@@ -81,41 +87,24 @@
         @include boxShadow();
 
         &:nth-child(2) {
-          background: $orange-color;
+          background: #d90429;
         }
         &:nth-child(3) {
-          background: #0066ff;
+          background: #83c5be;
         }
         &:nth-child(4) {
-          background: #ff0000;
+          background: #8d99ae;
         }
         &:nth-child(5) {
-          background: #41ff00;
+          background: #2b2d42;
         }
       }
     }
 
     .btn-orange-revert {
-      @include flex();
       width: 100%;
-      background: $bg-orange-color;
-      color: $orange-color;
       font-weight: $regular-bold;
       font-size: $medium-size;
-      transition: $transition;
-      &:hover {
-        background: $orange-color;
-        @include boxShadow($blur: 11px, $color: $orange-color);
-        color: #fff;
-      }
-      .ion-icon {
-        font-size: $big-size;
-      }
-      .old-price {
-        color: $dark-gray-color;
-        text-decoration: line-through;
-        margin-left: 1rem;
-      }
     }
   }
 }

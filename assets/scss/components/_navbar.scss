@@ -8,7 +8,13 @@ nav.nav {
     width: 100%;
     background: $light-gray-color;
     z-index: $z-index-50;
+    padding-top: 6px;
+    padding-bottom: 6px;
     @include flex($jc: space-between);
+    @include mq("desktop") {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
     &-left {
       padding-left: 20px;
       @include flex($jc: flex-start);
@@ -25,13 +31,28 @@ nav.nav {
             @include flex($jc: flex-start);
           }
           .navbar-link {
-            border-radius: $radius;
-            padding: 10px;
-            margin-right: 5px;
+            margin-right: 22px;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -3px;
+              left: 50%;
+              transform: translateX(-50%);
+              height: 2px;
+              width: 0;
+              background: $orange-color;
+              transition: $transition;
+            }
             &:hover,
             &.active {
-              background: $blue-color;
-              color: $light-gray-color;
+              color: $orange-color;
+              &::before {
+                width: 90%;
+              }
+            }
+            &.active {
+              font-weight: $semi-bold;
             }
           }
         }
@@ -48,32 +69,31 @@ nav.nav {
         @include flex($jc: flex-end);
         position: relative;
         font-size: $big-size;
-        background: $white-color;
         border-radius: $radius;
         padding: 5px;
         margin-right: 8px;
         @include mq("desktop") {
-          padding: 8px;
+          padding: 5px;
           margin-right: 12px;
+          font-size: $medium-size;
         }
         &:hover {
-          background: $dark-gray-color;
-          color: $white-color;
+          color: $orange-color;
         }
         .counter {
-          width: 16px;
-          height: 16px;
+          width: 15px;
+          height: 15px;
           position: absolute;
           top: 2px;
           left: 94%;
           background: $orange-color;
           color: $white-color;
-          font-size: $smallest-size;
+          font-size: $extra-small-size;
           @include flex();
           @include mq("desktop") {
-            width: 20px;
-            height: 20px;
-            font-size: $smaller-size;
+            width: 15px;
+            height: 15px;
+            font-size: $extra-small-size;
           }
         }
       }
@@ -87,10 +107,9 @@ nav.nav {
         display: none;
         @include mq("desktop") {
           @include flex();
-          height: 45px;
           margin-left: 5px;
           padding-left: 15px;
-          border-left: 2px solid $dark-gray-color;
+          border-left: 1px solid #dcdcdc;
         }
       }
       .search-box {
@@ -104,9 +123,10 @@ nav.nav {
         border: 1px solid #ced4da;
         border-radius: $radius;
         color: $black-color;
-        z-index: 1;
+        z-index: -$z-index-1;
         transition: $transition;
         opacity: 0;
+        pointer-events: none;
         background-color: #fff !important;
         @include mq("desktop") {
           width: auto;
@@ -177,11 +197,12 @@ nav.nav {
 
 /* Search Box Open Class */
 .open-search-box {
-  top: 75px !important;
+  top: 59px !important;
   padding: 0.375rem 0.75rem !important;
   width: calc(100% - 8px) !important;
   opacity: 1 !important;
-
+  pointer-events: all !important;
+  z-index: $z-index-1;
   @include mq("desktop") {
     top: 70px;
     width: calc(100% - 20px) !important;
@@ -240,7 +261,6 @@ nav.nav {
       @include boxShadow();
       .list-title {
         margin-bottom: 5px;
-        border-bottom: 1px dashed $black-color;
         font-size: $regular-size;
         @include lineHeight($regular-size);
       }
@@ -260,6 +280,7 @@ nav.nav {
             display: block;
             font-size: $smaller-size;
             @include lineHeight($smaller-size);
+            @include flex($jc: flex-start);
           }
         }
       }

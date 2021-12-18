@@ -126,12 +126,26 @@
     }
     &-btns {
       margin-top: 25px;
-      @include flex($jc: flex-start);
+      @include flex($direction: column);
+
+      @include mq("tablet") {
+        @include flex($jc: flex-start);
+      }
       .btn-orange {
-        @include flex($jc: space-around);
+        @include flex($jc: center);
+        @include mq() {
+          @include flex($jc: space-around);
+        }
       }
       .btn-favorite {
         align-self: normal;
+      }
+      .btn {
+        margin-bottom: 8px;
+        width: 100%;
+        @include mq() {
+          margin-bottom: 0;
+        }
       }
     }
     /* input > number arttırma butonlarını gizlemek için */

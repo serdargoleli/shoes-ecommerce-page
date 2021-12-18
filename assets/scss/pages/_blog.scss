@@ -63,7 +63,7 @@
         margin-right: 0;
       }
       &:hover {
-        color: $blue-color !important;
+        color: $orange-color !important;
       }
     }
   }
@@ -125,5 +125,8 @@
   }
   .top-100 {
     top: 100px !important;
+  }
+  .footer {
+    margin-top: 120px;
   }
 }
