@@ -26,7 +26,9 @@
               </li>
               <!-- DROPDOWN START -->
               <li class="navbar-item dropdown">
-                <a class="navbar-link dropdown-toggle" href="products.html"> Ürünler <ion-icon class="ms-2" name="chevron-down-outline"></ion-icon> </a>
+                <a class="navbar-link dropdown-toggle" href="products.html">
+                  Ürünler <ion-icon class="ms-2" name="chevron-down-outline"></ion-icon>
+                </a>
                 <div class="dropdown-menu megamenu" role="menu">
                   <div class="dropdown-content">
                     <div class="container-fluid">
@@ -206,8 +208,8 @@
         <a href="contact.html" class="navbar-link">İletişim</a>
         <div class="user-box">
           <hr />
-          <a href="blog.html" class="navbar-link">Giriş Yap</a>
-          <a href="contact.html" class="navbar-link">Üye Ol</a>
+          <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#login" class="navbar-link">Giriş Yap</a>
+          <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#register" class="navbar-link">Üye Ol</a>
         </div>
       </div>
     </div>
@@ -527,72 +529,72 @@
       </div>
     </footer>
 
-<!-- Login  -->
-<div class="login-modal modal fade" id="login" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header text-center d-block">
-        <h5 class="modal-title">Giriş Yap</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="floating-form mb-3">
-          <input type="text" class="form-control" id="username" autocomplete="off" required />
-          <label for="username">Kullanıcı Adı</label>
-        </div>
-        <div class="floating-form">
-          <input type="password" class="form-control" id="name" autocomplete="off" required />
-          <label for="name">Şifre</label>
-        </div>
-        <div class="text-end">
-          <a href="#" class="text-end"><small>Şifremi Unuttum.</small></a>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-orange w-100">Giriş Yap</button>
-        <button type="button" class="btn btn-sm btn-orange outline w-100" data-bs-dismiss="modal">Vazgeç</button>
-        <div class="mt-3">
-          Hesabın yok mu?
-          <a href="javascript:;" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register"><b>Hesap oluştur</b></a>
+    <!-- Login  -->
+    <div class="login-modal modal fade" id="login" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-center d-block">
+            <h5 class="modal-title">Giriş Yap</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="floating-form mb-3">
+              <input type="text" class="form-control" id="username" autocomplete="off" required />
+              <label for="username">Kullanıcı Adı</label>
+            </div>
+            <div class="floating-form">
+              <input type="password" class="form-control" id="name" autocomplete="off" required />
+              <label for="name">Şifre</label>
+            </div>
+            <div class="text-end">
+              <a href="#" class="text-end"><small>Şifremi Unuttum.</small></a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-orange w-100">Giriş Yap</button>
+            <button type="button" class="btn btn-sm btn-orange outline w-100" data-bs-dismiss="modal">Vazgeç</button>
+            <div class="mt-3">
+              Hesabın yok mu?
+              <a href="javascript:;" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register"><b>Hesap oluştur</b></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Register -->
-<div class="login-modal modal fade" id="register" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header text-center d-block">
-        <h5 class="modal-title">Üye Ol</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="floating-form mb-3">
-          <input type="text" class="form-control" id="fullname" autocomplete="off" required />
-          <label for="fullname">Ad Soyad</label>
-        </div>
-        <div class="floating-form mb-3">
-          <input type="email" class="form-control" id="email" autocomplete="off" required />
-          <label for="email">E-posta</label>
-        </div>
-        <div class="floating-form">
-          <input type="password" class="form-control" id="r-password" autocomplete="off" required />
-          <label for="r-password">Şifre</label>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-orange w-100">Üye Ol</button>
-        <button type="button" class="btn btn-sm btn-orange outline w-100" data-bs-dismiss="modal">Vazgeç</button>
-        <div class="mt-3">
-          Zaten bir Hesabım var.
-          <a href="javascript:;" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#login"><b>Giriş Yap</b></a>
+    <!-- Register -->
+    <div class="login-modal modal fade" id="register" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-center d-block">
+            <h5 class="modal-title">Üye Ol</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="floating-form mb-3">
+              <input type="text" class="form-control" id="fullname" autocomplete="off" required />
+              <label for="fullname">Ad Soyad</label>
+            </div>
+            <div class="floating-form mb-3">
+              <input type="email" class="form-control" id="email" autocomplete="off" required />
+              <label for="email">E-posta</label>
+            </div>
+            <div class="floating-form">
+              <input type="password" class="form-control" id="r-password" autocomplete="off" required />
+              <label for="r-password">Şifre</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-orange w-100">Üye Ol</button>
+            <button type="button" class="btn btn-sm btn-orange outline w-100" data-bs-dismiss="modal">Vazgeç</button>
+            <div class="mt-3">
+              Zaten bir Hesabım var.
+              <a href="javascript:;" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#login"><b>Giriş Yap</b></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- SCRIPTS  -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
