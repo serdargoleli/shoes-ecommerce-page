@@ -1,3 +1,5 @@
+console.log("https://github.com/serdargoleli/shoes-ecommerce-page");
+
 /* ===========> SEARCH BOX <===========  */
 const btnSearchBoxToggle = document.getElementById("btn-toggle-search-box");
 const searchBox = document.getElementById("search-box");
@@ -34,3 +36,14 @@ btnCloseMenu.addEventListener("click", () => {
   mobileMenuBox.classList.remove("open-mobile-menu");
   overlay.classList.remove("open-overlay");
 });
+
+// Home Select Shoes Size
+var div = document.getElementById("select-size");
+var items = div.getElementsByClassName("size-item");
+for (var i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("checked");
+    current[0].className = current[0].className.replace(" checked", "");
+    this.className += " checked";
+  });
+}
