@@ -2,15 +2,25 @@ console.log("https://github.com/serdargoleli/shoes-ecommerce-page");
 
 /* ===========> SEARCH BOX <===========  */
 const btnSearchBoxToggle = document.getElementById("btn-toggle-search-box");
-const searchBox = document.getElementById("search-box");
-const searchBoxInput = document.getElementById("search-box-input");
+const searchBoxOverlay = document.getElementById("search-box-overlay");
+const searchBoxContainer = document.getElementById("search-box-container");
+const searchInput = document.getElementById("search-input");
 
 btnSearchBoxToggle.addEventListener("click", () => {
-  searchBox.classList.toggle("open-search-box");
+  searchBoxOverlay.classList.toggle("open-search-box-overlay");
+  searchBoxContainer.classList.toggle("open-search-box");
   /* Eger search-box açıksa inputa focusla ve içindeki değeri sıfırla  */
-  if (searchBox.classList.contains("open-search-box")) {
-    searchBoxInput.focus();
-    searchBoxInput.value = "";
+  if (searchBoxContainer.classList.contains("open-search-box")) {
+    searchInput.focus();
+    searchInput.value = "";
+  }
+});
+
+searchBoxOverlay.addEventListener("click", () => {
+  if (searchBoxContainer.classList.contains("open-search-box")) {
+    searchBoxOverlay.classList.remove("open-search-box-overlay");
+    searchBoxContainer.classList.remove("open-search-box");
+    console.log("...");
   }
 });
 

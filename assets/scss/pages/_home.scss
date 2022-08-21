@@ -218,3 +218,71 @@
     transition: $transition;
   }
 }
+
+.search-box-overlay {
+  transition: $transition;
+  opacity: 0;
+  z-index: -99;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 100vh;
+  background: #000000cb;
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+}
+.search-box-container {
+  transition: $transition;
+  opacity: 0;
+  z-index: -99;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  @include mq("desktop") {
+    width: 40%;
+    margin: 50px;
+  }
+  .search-box-input {
+    border-radius: $radius;
+    padding: 25px;
+    background-color: $light-gray-color;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    .icon {
+      position: absolute;
+      font-size: 16px;
+      color: $dark-gray-color;
+    }
+    input {
+      padding: 0;
+      padding-left: 24px;
+      border-radius: 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $box-shadow-color;
+      color: $dark-gray-color;
+      &:focus,
+      &:active,
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+  .search-list {
+    a:hover .card {
+      background: $light-gray-color !important;
+      & img {
+        transform: scale(0.9);
+      }
+    }
+    img {
+      vertical-align: middle;
+      transition: $transition;
+    }
+  }
+}
